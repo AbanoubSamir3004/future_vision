@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Future Vision</title>
+  <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/hover.css">
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <style>
+    * {
+      transition: 0.6s all ease-in-out;
+    }
+
+    /* width */
+
+    ::-webkit-scrollbar {
+      width: 14px;
+    }
+
+
+    /* Track */
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+    }
+
+
+    /* Handle */
+
+    ::-webkit-scrollbar-thumb {
+      background: #009a74;
+      border-radius: 10px;
+      border: 1px solid white;
+    }
+
+
+    /* Handle on hover */
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #009a74;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(238, 238, 238, 0.637) !important;
+      opacity: 1 !important;
+      /* Firefox */
+    }
+
+    body {
+      font-family: 'El Messiri', sans-serif;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    #myNavbar .nav-link {
+      color: white;
+      white-space: nowrap;
+    }
+
+    .rotating {
+      animation: rotating 3s linear infinite;
+    }
+
+    .second-section {
+      background-image: url(assets/img/section2.png);
+      background-repeat: repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .secTowCard {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      border-radius: 12px;
+      border: 1px solid #45b16f;
+      position: relative;
+    }
+
+    .secTowCardHover {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      border-radius: 12px;
+    }
+
+    .secTowCardHoverBg1 {
+      background: linear-gradient(rgb(69 177 111 / 80%), rgb(69 178 111 / 80%)), #44b26f url(assets/img/ga-01.jpg) center center/cover no-repeat scroll;
+    }
+
+    .secTowCardHoverBg2 {
+      background: linear-gradient(rgb(69 177 111 / 80%), rgb(69 178 111 / 80%)), #44b26f url(assets/img/ga-02.jpg) center center/cover no-repeat scroll;
+    }
+
+    .secTowCardHoverBg3 {
+      background: linear-gradient(rgb(69 177 111 / 80%), rgb(69 178 111 / 80%)), #44b26f url(assets/img/ga-03.jpg) center center/cover no-repeat scroll;
+    }
+
+    .secTowCard:hover .secTowCardHover {
+      display: flex;
+    }
+
+    .pt-100 {
+      padding-top: 100%;
+    }
+
+
+
+
+    .cardImages {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cardImagesHover {
+      display: none;
+    }
+
+    .cardImages:hover .cardImagesHover {
+      display: flex;
+    }
+
+    .fourth-section {
+      background-image: url(assets/img/section4.jpg);
+      background-position: center center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    .cardWhatWeDo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 0 50px 50px 50px;
+    }
+
+    .cardWhatWeDo:hover,
+    .cardWhatWeDo:focus,
+    .cardWhatWeDo:active {
+      background-color: #47b071;
+      color: white;
+      transform: translateY(-10px);
+      background-image: url(assets/img/what-we-are-dot.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 50px 50px 0 50px;
+    }
+
+    .cardWhatWeDo i {
+      border-radius: 0 50px 50px 50px;
+      background-color: #eff2f7;
+    }
+
+
+
+    .cardWhatWeDo:hover i,
+    .cardWhatWeDo:focus i,
+    .cardWhatWeDo:active i {
+      border-radius: 50px 50px 0 50px;
+      background-color: white;
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    .end-section {
+      background: #45b26f url(assets/img/endSection.png) center center/cover no-repeat fixed;
+    }
+
+    .aFooter {
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      position: relative;
+      margin: 0;
+      text-align: center;
+      display: block;
+      box-shadow: 0 10px 29.7px .3px rgba(225, 225, 225, .64) !important;
+
+    }
+
+    .aFooter:hover,
+    .aFooter:focus,
+    .aFooter:active {
+      color: black;
+    }
+
+    .aFooter i {
+      color: white;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50% 0 50% 50%;
+      width: auto;
+      background-color: #45b26f;
+    }
+
+
+
+
+
+
+    @media only screen and (min-width: 1400px) {
+
+
+      .third-section:before {
+        content: "";
+        position: absolute;
+        right: 41px;
+        top: 18px;
+        background: url(assets/img/circle-small-white.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 240px;
+        width: 240px;
+        z-index: 999;
+        animation: alltuchtopdown 1.5s ease-in-out 0s infinite alternate;
+        animation-duration: 2.5s;
+      }
+
+      .fourth-section:before {
+        content: "";
+        position: absolute;
+        right: 41px;
+        top: 18px;
+        background: url(assets/img/circle-small.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 240px;
+        width: 240px;
+        z-index: 999;
+        animation: alltuchtopdown 1.5s ease-in-out 0s infinite alternate;
+        animation-duration: 2.5s;
+      }
+
+
+    }
+
+
+
+    @media only screen and (max-width: 991px) {
+
+      #myNavbar {
+        background-color: black;
+        box-shadow: -11px -6px 20px 0px black;
+      }
+
+      .frist-section {
+        margin-top: 80px;
+      }
+
+    }
+
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    @keyframes alltuchtopdown {
+      0% {
+        top: 0px;
+      }
+
+
+      50% {
+        top: 18px;
+      }
+
+      100% {
+        top: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="display: contents;" href="index.html">
+          <img src="assets/img/Logo.png" style="max-height: 65px;" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="تبديل التنقل">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link text-white active px-xl-4 py-3" aria-current="page" href="index.html">الصفحة
+                الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-xl-4 py-3" href="javascript:void(0);">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-xl-4 py-3" href="javascript:void(0);">خدماتنا </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-xl-4 py-3" href="javascript:void(0);">أعمالنا </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-xl-4 py-3" href="javascript:void(0);">عملائنا </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-xl-4 py-3" href="javascript:void(0);"> أراء العملاء </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-xl-4 py-3" href="javascript:void(0);"> إتصل بنا </a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-end py-3">
+            <a href="index.html" class="btn btn-success pt-2">EN <i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="frist-section">
+    <div class="home_slider_top_item position-relative" style="width: 100%; display: inline-block;">
+      <img src="assets/img/home-bg.jpg" class="w-100" style="max-height: 100vh;">
+      <img src="assets/img/dot-circle.png" class="position-absolute rotating" style="top: 2%;left: 9%;width: 39vw;">
+      <img src="assets/img/mean.png" class="position-absolute " style="bottom: 0;left:8%    ;max-height: 86%;">
+      <div class="position-absolute "
+        style="left: 48vw;right: 0;bottom: 0;top: 0;display: flex;justify-content: center;align-items: center;">
+        <div class="col-12">
+          <div class="row m-0">
+            <div class="col-12 text-center text-white">
+              <h1 class="fs-1"> <span style="color: #45b26f;" class="fw-bold">فيوتشر</span> للبرمجيات </h1>
+              <p class="fs-5">رواد صناعة المتاجر الإلكترونية ومواقع الإنترنت والتطبيقات و الأنظمة الإلكترونية</p>
+              <button type="button" class="btn btn-success fs-3 hvr-grow mx-3">أخر الأعمال <i
+                  class="fas fa-arrow-circle-right my-1 pt-1"></i></button>
+              <button type="button" class="btn btn-outline-light fs-3 hvr-grow mx-3">إتصل بنا <i
+                  class="fas fa-arrow-circle-right my-1 pt-1"></i> </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="second-section pb-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 py-5 text-white text-center">
+          <h2 class="fs-1">خدماتنا</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-server fs-1 mb-4"></i>
+            <span>أستضافة المواقع الاكترونية</span>
+            <div class="secTowCardHover secTowCardHoverBg1 fs-3 py-5">
+              <span>أستضافة المواقع الاكترونية</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fab fa-android fs-1 mb-4"></i>
+            <span>تصميم وبرمجة التطبيقات</span>
+            <div class="secTowCardHover secTowCardHoverBg2 fs-3 py-5">
+              <span>تصميم وبرمجة التطبيقات</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-globe fs-1 mb-4"></i>
+            <span>تصميم المواقع الاكترونية</span>
+            <div class="secTowCardHover secTowCardHoverBg3 fs-3 py-5">
+              <span>تصميم المواقع الاكترونية</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-external-link-square-alt fs-1 mb-4"></i>
+            <span>تهيئة الموقع في محركات البحث</span>
+            <div class="secTowCardHover secTowCardHoverBg1 fs-3 py-5">
+              <span>تهيئة الموقع في محركات البحث</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-pencil-alt fs-1 mb-4"></i>
+            <span>تصميم الهوية التجارية</span>
+            <div class="secTowCardHover secTowCardHoverBg2 fs-3 py-5">
+              <span>تصميم الهوية التجارية</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-bullhorn fs-1 mb-4"></i>
+            <span>خدمات التسويق الاليكتروني</span>
+            <div class="secTowCardHover secTowCardHoverBg3 fs-3 py-5">
+              <span>خدمات التسويق الاليكتروني</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-cart-plus fs-1 mb-4"></i>
+            <span>تطوير المتاجر الإلكترونية</span>
+            <div class="secTowCardHover secTowCardHoverBg1 fs-3 py-5">
+              <span>تطوير المتاجر الإلكترونية</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-phone-alt fs-1 mb-4"></i>
+            <span>الدعم الفنى</span>
+            <div class="secTowCardHover secTowCardHoverBg2 fs-3 py-5">
+              <span>الدعم الفنى</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xxl-4 p-3">
+          <div class="secTowCard py-5 fs-3 hvr-buzz-out">
+            <i class="fas fa-code fs-1 mb-4"></i>
+            <span>برمجة خاصة مواقع ويب</span>
+            <div class="secTowCardHover secTowCardHoverBg3 fs-3 py-5">
+              <span>برمجة خاصة مواقع ويب</span>
+              <button type="button" class="btn btn-light px-3 mt-4 text-success">المزيد</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="third-section position-relative pb-5 bg-success">
+    <div class="container py-5">
+
+      <div class="row">
+        <div class="col-12 py-5 text-white text-center">
+          <h2 class="fs-1">عملائنا </h2>
+          <p class="fs-5 mt-4">تقدم شركتنا أفضل الحلول والعروض المتاحة لـ تصميم المواقع وبرمجة التطبيقات</p>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-sm-2">
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/pro1.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i> أمانة الرياض</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/pro2.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i> وزارة الزراعة السعودية</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/pro3.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i>الشركة العالمية للخدمات البيئية</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/Document.png);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i>ااا</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/ga-01.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i>ااا</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/ga-02.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i>ااا</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/ga-03.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i>ااا</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/Document.png);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i>ااا</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/ga-01.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i> إسم المشروع</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/ga-02.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i> إسم المشروع</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/ga-03.jpg);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i> إسم المشروع</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="position-relative bg-white pt-100 rounded">
+            <div class="bottom-0 end-0 position-absolute start-0 top-0 p-3">
+              <div class="cardImages" style="background-image: url(assets/img/Document.png);">
+                <div
+                  class="cardImagesHover align-items-center bg-black bg-opacity-50 flex-column h-100 hvr-icon-grow justify-content-end w-100 py-5">
+                  <a href="javascript:viod(0);" class="btn btn-success px-2 py-3 hvr-wobble-horizontal">
+                    <i class="fas fa-globe hvr-icon px-2"></i> إسم المشروع</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="fourth-section position-relative pb-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 py-5 text-success text-center">
+          <h2 class="fs-1">أعمالنا ومشروعاتنا</h2>
+          <p class="fs-5 mt-4">تقدم شركتنا أفضل الحلول والعروض المتاحة لـ تصميم المواقع وبرمجة التطبيقات</p>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-sm-2">
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fab fa-android fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5"> تطبيقات الجوال</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-cart-plus fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5">متاجر الألكترونية</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-globe fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5"> تصميم مواقع</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-desktop fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5">هويات تجارية</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-video fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5">موشن جرافيك</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-server fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5">حجز سيرفرات</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-bullhorn fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5">التسويق الالكتروني</span>
+          </div>
+        </div>
+        <div class="col p-3">
+          <div class="cardWhatWeDo py-5">
+            <i class="fas fa-code fs-1 mb-4 text-success p-4"></i>
+            <span class="fs-5">البرمجة الخاصة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fifth-section">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6 my-3">
+          <img src="assets/img/section5.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 my-3">
+          <div class="d-flex align-items-center">
+            <span style="font-size: 136px;width: fit-content;margin-bottom: -24px;"
+              class="fw-bold text-success">10</span>
+            <h2 class="w-auto px-3 fw-bold" style="line-height: 40px;">
+              سنوات من الخبرة في مجال تصميم المواقع الإلكترونية وبرمجة التطبيقات والتسويق الإلكتروني
+            </h2>
+          </div>
+          <p class="fs-5 text-justify">هل تبحث عن <a href="index.html"
+              class="text-success fw-bold text-decoration-none">شركة مبدعة</a> تكرس كل جهودها
+            من أجل نجاحك ونجاح موقعك الإلكتروني؟ إذا كانت الإجابة بنعم، لا تقلق
+            نحن هنا لخدمتك شركة <a href="index.html" class="text-success fw-bold text-decoration-none">فيوتشر</a> شريك
+            إلكتروني رائع للوصول للنجاح الذي
+            تسعى له ، من خلال خبرتنا الطويلة في مجال
+            التسويق الإلكتروني والحلول الرقمية فإننا نضمن لك العمل مع فريق من المحترفين في عالم الإنترنت.
+          </p>
+          <p class="fs-5 text-justify">
+            تُعد <a href="index.html" class="text-success fw-bold text-decoration-none">شركتنا </a> واحدة من أفضل
+            الشركات الرائدة في مجال تطوير وتصميم المواقع الإلكترونية . ولدينا خبرات طويلة في
+            مجال التسويق الإلكتروني واستضافة المواقع</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="end-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.536868823971!2d31.2031566845743!3d30.050141981880166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584131200d80cb%3A0xa5f3c8a51858fb8e!2zMjgg2LPZhNmK2YXYp9mGINin2KjYp9i42YfYjCDYp9mE2K_ZgtmK2Iwg2YLYs9mFINin2YTYr9mC2YrYjCDYp9mE2KzZitiy2Kk!5e0!3m2!1sar!2seg!4v1643295488818!5m2!1sar!2seg"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 py-5 text-white text-center">
+          <h2 class="fs-1">إتصل بنا الان</h2>
+          <p class="fs-5">توصل معنا علي مدار ال 24 ساعة وتحدث مع مهندسين مختصيين</p>
+        </div>
+        <div class="col-lg-5">
+          <a href="mailto:info@vision4software.com" class="row p-3 rounded-pill fs-5 mb-5 aFooter">
+            <i class="fas fa-phone-alt fs-1 bottom-0 end-0 top-0"></i>
+            info@vision4software.com</a>
+          <a href="tel:01032743425" class="row p-3 rounded-pill fs-5 mb-5 aFooter">
+            <i class="fas fa-phone-alt fs-1 bottom-0 end-0 top-0"></i>
+            01032743425</a>
+          <a href="vision4software.com" class="row p-3 rounded-pill fs-5 mb-5 aFooter">
+            <i class="fas fa-phone-alt fs-1 bottom-0 end-0 top-0"></i>
+            vision4software.com</a>
+          <a href="https://goo.gl/maps/SocjWgxWLNxqVV499" class="row p-3 rounded-pill fs-5 mb-5 aFooter">
+            <i class="fas fa-phone-alt fs-1 bottom-0 end-0 top-0"></i>
+            28 شارع سليمان اباظه، الدقي، الجيزه</a>
+        </div>
+        <div class="col-lg-7">
+          <div class="row">
+            <div class="col-md-6 mb-5">
+              <input type="text" class="bg-black bg-opacity-25 form-control fs-5 p-3 rounded-pill text-white"
+                placeholder="الأسم">
+            </div>
+            <div class="col-md-6 mb-5">
+              <input type="text" class="bg-black bg-opacity-25 form-control fs-5 p-3 rounded-pill text-white"
+                placeholder="الشركة">
+            </div>
+            <div class="col-md-6 mb-5">
+              <input type="text" class="bg-black bg-opacity-25 form-control fs-5 p-3 rounded-pill text-white"
+                placeholder="البريد الإلكتروني">
+            </div>
+            <div class="col-md-6 mb-5">
+              <input type="text" class="bg-black bg-opacity-25 form-control fs-5 p-3 rounded-pill text-white"
+                placeholder="عنوان الشركة">
+            </div>
+            <div class="col-12 mb-5">
+              <textarea type="text" class="bg-black bg-opacity-25 form-control fs-5 p-3 text-white"
+                style="border-radius: 40px;" rows="5" placeholder="رسالتك"></textarea>
+            </div>
+            <div class="col-12 text-center mb-5">
+              <button type="button" class="btn btn-light px-5 py-2">إرسال</button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery-3.6.0.js"></script>
+  <script>
+    window.onscroll = function () { myNavbar() };
+
+    function myNavbar() {
+      if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+        document.getElementById("myNavbar").className = "navbar navbar-expand-lg navbar-dark fixed-top bg-black";
+      } else {
+        document.getElementById("myNavbar").className = "navbar navbar-expand-lg navbar-dark fixed-top";
+      }
+    }
+  </script>
+</body>
+
+</html>
